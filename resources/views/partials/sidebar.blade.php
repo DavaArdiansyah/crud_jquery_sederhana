@@ -36,23 +36,15 @@
     <div class="sidebar-menu">
         <ul class="menu">
             <li class="sidebar-title">Menu</li>
-
-            <li class="sidebar-item active ">
-                <a class='sidebar-link' href="index.html">
-                    <i class="bi bi-grid-fill"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-
-            <li class="sidebar-item  has-sub">
-                <a class='sidebar-link' href="#">
+            <li class="sidebar-item has-sub {{ Request::routeIs('pengaturan.*') ? 'active' : '' }}">
+                <a class="sidebar-link" href="#">
                     <i class="bi bi-gear"></i>
                     <span>Pengaturan</span>
                 </a>
 
-                <ul class="submenu ">
-                    <li class="submenu-item  ">
-                        <a class="submenu-link" href="#roles">Roles</a>
+                <ul class="submenu">
+                    <li class="submenu-item {{ Request::routeIs('pengaturan.roles.*') ? 'active' : '' }}">
+                        <a class="submenu-link" href="{{ route('pengaturan.roles.index') }}">roles</a>
                     </li>
                 </ul>
             </li>

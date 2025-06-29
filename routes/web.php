@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('pengaturan.roles.index');
+    // return view('welcome');
 });
 
 //route untuk prefik pengaturan
