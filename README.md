@@ -45,21 +45,3 @@ php artisan migrate
 ```bash
 php artisan serve
 ```
-
-## 🛠 Jika Ingin Push ke Branch `main`
-
-Jika kamu berada di branch `dava_dev` tetapi ingin push ke branch `main` remote:
-
-```bash
-git push origin dava_dev:main
-```
-
-Atau merge ke `main` dan push:
-
-```bash
-git checkout main
-git merge dava_dev
-git push origin main
-```
-
----
