@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//route untuk prefik pengaturan
+Route::prefix('pengaturan')->group(function() {
+    //route untuk mengelola roles
+    require __DIR__.'/app/roles.php';
+});
